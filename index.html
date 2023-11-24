@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question Page</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  #noButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <h2>Do you want?</h2>
+  <button id="yesButton">Yes</button>
+  <button id="noButton">No</button>
+
+  <script>
+    const noButton = document.getElementById("noButton");
+
+    noButton.addEventListener("mousemove", function(event) {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      noButton.style.left = x + "px";
+      noButton.style.top = y + "px";
+    });
+
+    const yesButton = document.getElementById("yesButton");
+    yesButton.addEventListener("click", function() {
+      window.location.href = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID";
+    });
+  </script>
+</body>
+</html>
